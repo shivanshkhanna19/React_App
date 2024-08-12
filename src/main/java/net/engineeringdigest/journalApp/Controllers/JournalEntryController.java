@@ -1,6 +1,7 @@
 package net.engineeringdigest.journalApp.Controllers;
 
 import net.engineeringdigest.journalApp.Entity.JournalEntry;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.ArrayList;
@@ -16,5 +17,12 @@ public class JournalEntryController {
     public List<JournalEntry> getAll()
     {
         return new ArrayList<>(JournalEntries.values());
+    }
+
+    public String Delete()
+    {
+        return "K";
+
+
     }
 }
