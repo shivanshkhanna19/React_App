@@ -1,6 +1,7 @@
 package net.engineeringdigest.journalApp.Controllers;
 
 import net.engineeringdigest.journalApp.Entity.JournalEntry;
+import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -10,6 +11,8 @@ import java.util.Map;
 public class JournalEntryController {
 
     private Map<Long, JournalEntry> JournalEntries = new HashMap<>();
+
+    @GetMapping("/GetAll")
     public List<JournalEntry> getAll()
     {
         return new ArrayList<>(JournalEntries.values());
